@@ -8,6 +8,18 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>MQOTD</title>
+        
+        <script>
+            // Get the value of the 'date' parameter from the current URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const dateParam = urlParams.get('date');
+
+            // If the 'date' parameter exists, redirect to the new URL
+            if (dateParam) {
+            const newUrl = `https://www.moviequoteoftheday.com/?date=${dateParam}`;
+            window.location.replace(newUrl);
+            }
+        </script>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="refresh" content="0; URL=https://www.moviequoteoftheday.com" />
